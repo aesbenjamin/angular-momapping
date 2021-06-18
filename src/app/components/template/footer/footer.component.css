@@ -1,0 +1,9 @@
+.footer {
+    bottom: 0;
+    justify-content: flex-end;
+    display:flex;
+    background-color: darkkhaki;
+    position: fixed;
+
+
+}
