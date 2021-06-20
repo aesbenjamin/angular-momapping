@@ -1,1 +1,65 @@
-<p>nav works!</p>
+<mat-sidenav-container class="example-container" *ngIf="shouldRun">
+    <mat-sidenav [(opened)]="aberto" mode="side" (opened)="eventss.push('!abriu')" (closed)="eventss.push('!fechou')">
+      Menu lateral
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+    
+      
+      <button mat-mini-fab aria-label="Descubra" (click)="somaCartao()">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      
+      <br>
+
+      <mat-card class="mat-elevation-z4" *ngIf="isCard1Authorized">
+          <mat-card-title>Eu te amo Larissa</mat-card-title>
+         
+      </mat-card>
+      <br>
+      <mat-card class="mat-elevation-z4" *ngIf="isCard2Authorized">
+        <mat-card-title>Você é tudo pra mim</mat-card-title>
+       
+    </mat-card>
+    <br>
+    <mat-card class="mat-elevation-z4" *ngIf="isCard3Authorized">
+        <mat-card-title>Quero você</mat-card-title>
+       
+    </mat-card>
+    <br>
+    <mat-card class="mat-elevation-z4" *ngIf="isCard4Authorized">
+        <mat-card-title>Me beija</mat-card-title>
+       
+    </mat-card>
+    <br>
+    <mat-card class="mat-elevation-z4" *ngIf="isCard5Authorized">
+        <mat-card-title>Minha princesa</mat-card-title>
+       
+    </mat-card>
+    <br>
+    <mat-card class="mat-elevation-z4" *ngIf="isCard6Authorized">
+        <mat-card-title>Meu amor</mat-card-title>
+       
+    </mat-card>
+    <br>
+    <mat-card class="mat-elevation-z4" *ngIf="isCard7Authorized">
+        <mat-card-title>Sou doido por você</mat-card-title>
+       
+    </mat-card>
+    <br>
+    <mat-card class="mat-elevation-z4" *ngIf="isCard8Authorized">
+        <mat-card-title>Completamente apaixonado por você</mat-card-title>
+       
+    </mat-card>
+
+
+
+      <br>
+
+      <!--p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p-->
+      <!--p>Eventos:</p>
+      <div class="example-events">
+        <div *ngFor="let e of eventss">{{e}}</div>
+      </div-->
+    </mat-sidenav-content>
+  </mat-sidenav-container>
